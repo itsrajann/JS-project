@@ -1,0 +1,32 @@
+let nftCollection = [];
+
+function createNFT(name, creator) {
+    const nft = { name: name, artist: creator };
+    nftCollection.push(nft);
+}
+
+function displayNFTs() {
+    for (let i = 0; i < nftCollection.length; i++) {
+        console.log(`Name: ${nftCollection[i].name}, Artist: ${nftCollection[i].artist}`);
+    }
+}
+
+function getTotalCount() {
+    return nftCollection.length;
+}
+
+createNFT("Taj Mahal ", "Artist Anjali");
+createNFT("Kerala Backwaters", "Artist Raj");
+createNFT("Rajasthan Desert Night", "Artist Priya");
+
+displayNFTs();
+
+console.log("Totalś:", getTotalCount());
+
+
+OUTPUT-
+
+Name: Taj Mahal , Artist: Artist Anjali
+Name: Kerala Backwaters, Artist: Artist Raj
+Name: Rajasthan Desert Night, Artist: Artist Priya
+Totalś: 3
